@@ -1,6 +1,6 @@
 $(document).ready(function() {
   const apiRoot = 'https://enigmatic-retreat-39554.herokuapp.com/v1/task/';
-  const trelloApiRoot = 'http://localhost:8090/v1/trello/';
+  const trelloApiRoot = 'https://enigmatic-retreat-39554.herokuapp.com/v1/trello/';
   const datatableRowTemplate = $('[data-datatable-row-template]').children()[0];
   const $tasksContainer = $('[data-tasks-container]');
 
@@ -168,7 +168,7 @@ $(document).ready(function() {
   }
 
   function handleCardCreationRequest(event) {
-    var requestUrl = trelloApiRoot + 'createTrelloCard';
+    var requestUrl = trelloApiRoot + 'createTrelloCardWithBadges';
     var $relatedTaskRow = $(event.target).parents('[data-task-id]');
     var relatedTaskId = $relatedTaskRow.attr('data-task-id');
     var relatedTask = availableTasks[relatedTaskId];
