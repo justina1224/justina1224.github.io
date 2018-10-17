@@ -1,6 +1,6 @@
 $(document).ready(function() {
-  const apiRoot = 'https://enigmatic-retreat-39554.herokuapp.com/v1/task/';
-  const trelloApiRoot = 'https://enigmatic-retreat-39554.herokuapp.com/v1/trello/';
+  const apiRoot = 'https://limitless-river-61909.herokuapp.com/v1/task/';
+  const trelloApiRoot = 'https://limitless-river-61909.herokuapp.com/v1/trello/';
   const datatableRowTemplate = $('[data-datatable-row-template]').children()[0];
   const $tasksContainer = $('[data-tasks-container]');
 
@@ -205,3 +205,4 @@ $(document).ready(function() {
   $tasksContainer.on('click','[data-task-edit-abort-button]', toggleEditingState);
   $tasksContainer.on('click','[data-task-submit-update-button]', handleTaskUpdateRequest);
   $tasksContainer.on('click','[data-task-delete-button]', handleTaskDeleteRequest);
+});
